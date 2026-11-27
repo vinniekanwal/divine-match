@@ -1,0 +1,16 @@
+title: Divine Match
+description: Boutique matchmaking for working professionals of every background seeking a life partner. Personal introductions, thoughtfully chosen.
+application_url: "https://docs.google.com/forms/d/e/1FAIpQLScRNxUKfMH_RF8nIj0NaETpgAoUltLuSjWFR85EjhZu1SEMzw/viewform"
+url: ""
+baseurl: ""
+lang: en
+timezone: America/Denver
+exclude:
+  - "Vision of Divine Match-4.pdf"
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - bin
+  - vendor
+  - .tools
+  - .bundle

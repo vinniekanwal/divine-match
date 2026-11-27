@@ -1,0 +1,9 @@
+.DS_Store
+.bundle/
+.tools/
+vendor/
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata
+/Vision of Divine Match-4.pdf

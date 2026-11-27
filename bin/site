@@ -1,0 +1,14 @@
+#!/bin/sh
+set -eu
+
+cd "$(dirname "$0")/.."
+
+# Use the self-contained runtime installed on the business owner's Mac.
+# A checkout on another machine can use its regular Ruby and Bundler instead.
+if [ -x .tools/jruby/bin/jruby ] && [ -x .tools/temurin/Contents/Home/bin/java ]; then
+  export JAVA_HOME="$PWD/.tools/temurin/Contents/Home"
+  export BUNDLE_PATH="$PWD/vendor/bundle"
+  exec .tools/jruby/bin/jruby -S bundle exec jekyll "$@"
+fi
+
+exec bundle exec jekyll "$@"

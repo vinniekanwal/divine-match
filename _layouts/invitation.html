@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fcf8f1">
+    <title>{{ site.title }} | Boutique Matchmaking</title>
+    <meta name="description" content="{{ site.description | escape }}">
+    <link rel="icon" type="image/png" href="{{ '/assets/images/emblem.png' | relative_url }}">
+    <link rel="preload" href="{{ '/assets/fonts/cormorant-roman.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="masthead">
+      <div class="masthead-inner">
+        {% include brand.html %}
+        <nav aria-label="Main navigation">
+          <a href="#story">Our story</a>
+          <a href="#approach">Our approach</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <picture class="hero-image" aria-hidden="true">
+          <source media="(max-width: 640px)" srcset="{{ '/assets/images/invitation-960.webp' | relative_url }}">
+          <img src="{{ '/assets/images/invitation-1880.webp' | relative_url }}" width="1880" height="836" alt="" fetchpriority="high">
+        </picture>
+        <div class="hero-copy">
+          <p class="eyebrow ornament"><span>Boutique matchmaking</span></p>
+          <h1 id="hero-title">{{ page.hero_title }} <em>{{ page.hero_emphasis }}</em></h1>
+          <p class="intro">{{ page.intro }}</p>
+          {% include application.html note_id="hero-form-note" %}
+        </div>
+      </section>
+
+      <section class="story wrap" id="story" aria-labelledby="story-title">
+        <div class="story-copy">
+          <p class="eyebrow ruled">Our story</p>
+          <h2 id="story-title">{{ page.story_heading }}</h2>
+          <div class="prose">{{ content }}</div>
+        </div>
+        <div class="story-photo">
+          <img src="{{ '/assets/images/tea-for-two-960.webp' | relative_url }}"
+               srcset="{{ '/assets/images/tea-for-two-560.webp' | relative_url }} 560w, {{ '/assets/images/tea-for-two-960.webp' | relative_url }} 960w"
+               sizes="(max-width: 720px) 90vw, 42vw" width="960" height="960"
+               loading="lazy" alt="Two cups of tea set out beside a vase of white blossoms.">
+        </div>
+      </section>
+
+      <section id="approach" class="approach" aria-labelledby="approach-title">
+        <div class="wrap">
+          <p class="eyebrow ruled">Our approach</p>
+          <h2 id="approach-title">{{ page.approach_heading }}</h2>
+          <ol class="steps" role="list">
+            {% for step in page.approach %}
+            <li>
+              <h3>{{ step.title }}</h3>
+              <p>{{ step.text }}</p>
+            </li>
+            {% endfor %}
+          </ol>
+        </div>
+      </section>
+
+      <section class="closing" aria-labelledby="apply-title">
+        <div class="wrap closing-inner">
+          <div>
+            <h2 id="apply-title">{{ page.invitation_heading }}</h2>
+            <p>{{ page.invitation_text }}</p>
+          </div>
+          {% include application.html note_id="closing-form-note" %}
+        </div>
+      </section>
+    </main>
+    <footer class="footer wrap">
+      {% include brand.html %}
+      <small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</small>
+    </footer>
+  </body>
+</html>
