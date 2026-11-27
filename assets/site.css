@@ -210,7 +210,8 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
 .closing .button:hover { background: #fffaf3; }
 .closing .button:focus-visible { outline-color: var(--paper); }
 .closing .form-note { color: #f1dcd8; }
-.footer { display: flex; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 1.5rem; }
+.footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 1.5rem; }
+.footer-disclaimer { flex-basis: 100%; margin: 0; font-size: .875rem; line-height: 1.5; }
 .footer .brand { font-size: 1.7rem; }
 .footer .brand img { height: 2.3rem; }
 .footer small { font-size: .875rem; }
@@ -252,5 +253,4 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
   .brand img { height: 2rem; }
   nav { gap: .65rem; }
   .hero h1 { font-size: clamp(2.55rem, 10.8vw, 2.7rem); }
-  .footer { flex-wrap: wrap; }
 }
