@@ -94,7 +94,7 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
   place-items: center;
   min-height: clamp(545px, 44vw, 690px);
   padding: clamp(3.8rem, 6vw, 6.1rem) 5% clamp(4.4rem, 6.8vw, 7.25rem);
-  background: #f4e6ce;
+  background: #fcf8f1;
   text-align: center;
   border-bottom: 1px solid var(--line);
 }
@@ -104,9 +104,9 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 48% 85% at 50% 52%, #faf0dde6 0%, #faf0ddad 55%, transparent 100%);
+  background: linear-gradient(90deg, transparent, #fcf8f130 35%, transparent 65%);
 }
-.hero-copy { width: 100%; }
+.hero-copy { width: min(100%, 62rem); margin-inline: auto; }
 .eyebrow {
   display: flex;
   gap: .9rem;
@@ -127,7 +127,7 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
 }
 .hero h1 {
   margin: 1rem auto 1.25rem;
-  font-size: clamp(3.9rem, 6.75vw, 7rem);
+  font-size: clamp(3.5rem, 5.8vw, 6.25rem);
   font-weight: 500;
   letter-spacing: -.051em;
   line-height: .99;
@@ -215,6 +215,14 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
 .footer .brand img { height: 2.3rem; }
 .footer small { font-size: .875rem; }
 
+@media (min-width: 721px) and (max-width: 1100px) {
+  .hero { min-height: 0; padding: 3.4rem 5% clamp(20rem, 44vw, 31rem); }
+  .hero-copy { width: 100%; }
+  .hero h1 { font-size: clamp(3.5rem, 6vw, 4.5rem); }
+  .hero-image { inset: auto 0 0; aspect-ratio: 2.24; mask-image: linear-gradient(transparent, black 8%); }
+  .hero-image::after { content: none; }
+}
+
 @media (max-width: 720px) {
   .wrap, .masthead-inner { width: 89%; }
   .masthead-inner { min-height: 68px; }
@@ -222,8 +230,9 @@ nav a:hover { color: var(--wine); text-decoration: underline; text-underline-off
   .brand img { height: 2.3rem; }
   nav { gap: .9rem; }
   nav a { font-size: .875rem; }
-  .hero { min-height: 0; padding: 3.4rem 5% clamp(8rem, 23vw, 10rem); }
-  .hero-image { inset: auto 0 0; aspect-ratio: 2.24; mask-image: linear-gradient(transparent, black 65%); }
+  .hero-copy { width: 100%; }
+  .hero { min-height: 0; padding: 3.4rem 5% clamp(10rem, 48vw, 21rem); }
+  .hero-image { inset: auto 0 0; aspect-ratio: 2.24; mask-image: linear-gradient(transparent, black 8%); }
   .hero-image::after { content: none; }
   .hero h1 { font-size: clamp(3.1rem, 7.9vw, 4.3rem); }
   .intro { max-width: 31rem; }

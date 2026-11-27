@@ -31,3 +31,7 @@ jruby -S bundle config set --local path vendor/bundle
 jruby -S bundle install
 jruby -S bundle exec jekyll serve
 ```
+
+## Wedding hero image
+
+The homepage uses the AI-generated wedding invitation background. The desktop image is `assets/images/invitation-soft-shadow-1880.webp`, and the mobile image is `assets/images/invitation-soft-shadow-960.webp`.
