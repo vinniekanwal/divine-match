@@ -2,7 +2,7 @@
 layout: invitation
 hero_title: Trusted Introductions.
 hero_emphasis: Meaningful Connections.
-intro: Tell us about the life you’ve built and the person you hope to share it with. Our matchmakers get to know your values, your ambitions, and what partnership means to you.
+intro: Divine Match is a concierge matchmaking service for working professionals seeking a life partner. Our matchmakers get to know your values, your ambitions, and what partnership means to you.
 story_heading: It began with a friend.
 approach_heading: How introductions happen
 approach:
