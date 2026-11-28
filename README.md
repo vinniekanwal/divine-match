@@ -34,4 +34,4 @@ jruby -S bundle exec jekyll serve
 
 ## Wedding hero image
 
-The homepage uses the AI-generated wedding invitation background. The desktop image is `assets/images/invitation-soft-shadow-1880.webp`, and the mobile image is `assets/images/invitation-soft-shadow-960.webp`.
+The homepage uses the AI-generated wedding invitation background. The desktop image is `assets/images/invitation-soft-shadow-1880.webp`. At widths of 720px and below, the hero uses the separate portrait background `assets/images/invitation-portrait-mobile.jpg`, composed to keep the wedding details below the text. Both remain backgrounds behind the hero content.
